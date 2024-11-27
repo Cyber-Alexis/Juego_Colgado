@@ -27,9 +27,15 @@ public class Juego_Colgado {
 	    String palabrasecreta = x.nextLine().toLowerCase();
 	    char[] palabraadivinada = new char[palabrasecreta.length()];
 	    for (int i = 0; i < palabrasecreta.length(); i++) {
-	    	 palabraadivinada[i] = '_';  // Inicializaremos con guiones bajos
+	    	 palabraadivinada[i] = '_';  // Inicializaremos con varios guiones bajos	  
+	    	 
+	    }
+	    //Pondremos un int como contador de rondas ganadas por jugador
+	    int[] rondasGanadas = new int[numJugadores];
 	    
-	    
+	    // Rondas del juego
+	    for (int ronda = 1; ronda <= numrondas; ronda++) {
+	   
 	    }
 	    
 	}
