@@ -22,6 +22,16 @@ public class Juego_Colgado {
 	    int numrondas = x.nextInt();
 	    x.nextLine();
 		
+	  //En este apartado haremos lo de la palabra secreta
+	    System.out.print("Jugador 1, ingresa la palabra secreta: ");
+	    String palabrasecreta = x.nextLine().toLowerCase();
+	    char[] palabraadivinada = new char[palabrasecreta.length()];
+	    for (int i = 0; i < palabrasecreta.length(); i++) {
+	    	 palabraadivinada[i] = '_';  // Inicializaremos con guiones bajos
+	    
+	    
+	    }
+	    
 	}
 
 }
