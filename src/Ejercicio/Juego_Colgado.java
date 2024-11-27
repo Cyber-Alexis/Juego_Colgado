@@ -15,9 +15,13 @@ public class Juego_Colgado {
 		int numJugadores = x.nextInt();	       
 		while (numJugadores < 2) {	        	
 			System.out.print("Debe haber como minimo 2 jugadores. Intentalo otra vez: ");	           
-			numJugadores = x.nextInt();
-			
+			numJugadores = x.nextInt();		
 		}
+		
+		System.out.println("¿Cuántas rondas quereis jugar? ");  
+	    int numrondas = x.nextInt();
+	    x.nextLine();
+		
 	}
 
 }
