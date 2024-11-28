@@ -46,8 +46,22 @@ public class Juego_Colgado {
             for (int i = 0; i < numJugadores; i++) {
                 intentosrestantes[i] = 6;
             }
+            // Comenzamos el juego por jugadores
+            while (!palabraAdivinada) {
+                for (int jugador = 0; jugador < numJugadores; jugador++) {
+                    // Mostrar estado actual de la palabra
+                    System.out.print("Palabra: ");
+                    for (int i = 0; i < palabraadivinada.length; i++) {
+                        System.out.print(palabraadivinada[i] + " ");  // Usamos un ciclo for tradicional
+                    }
+             
+                    
+                    System.out.println("Jugador " + (jugador + 1) + " te quedan " + intentosrestantes[jugador] + " intentos.");
+                    System.out.print("Introduce una letra: ");
+                    String letra = x.nextLine().toLowerCase();
+            
+                }
+            }
 	    }
-	    
 	}
-
 }
