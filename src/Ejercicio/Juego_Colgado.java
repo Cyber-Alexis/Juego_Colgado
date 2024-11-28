@@ -35,7 +35,17 @@ public class Juego_Colgado {
 	    
 	    // Rondas del juego
 	    for (int ronda = 1; ronda <= numrondas; ronda++) {
-	   
+	    	//Este apartado de rondas servira para indicar la ronda que esta en curso
+	    	System.out.println("\n--- Ronda " + ronda + " ---"); 
+	    	//En esta parte colocare un boolean para indicar si la palabra ha sido adivinada
+	    	boolean palabraAdivinada = false;
+	    	//Aqui colocare un array que guarda el numero de intentos de cada jugador
+            int[] intentosrestantes = new int[numJugadores];
+            
+            //Aqui utilizare un for que buscara en el array los intentos restantes de cada jugador y que seran 6
+            for (int i = 0; i < numJugadores; i++) {
+                intentosrestantes[i] = 6;
+            }
 	    }
 	    
 	}
