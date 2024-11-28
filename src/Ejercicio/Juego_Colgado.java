@@ -54,7 +54,7 @@ public class Juego_Colgado {
                     for (int i = 0; i < palabraadivinada.length; i++) {
                         System.out.print(palabraadivinada[i] + " ");  // Usamos un ciclo for tradicional
                     }
-             
+                    System.out.println();
                     
                     System.out.println("Jugador " + (jugador + 1) + " te quedan " + intentosrestantes[jugador] + " intentos.");
                     System.out.print("Introduce una letra: ");
