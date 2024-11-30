@@ -60,8 +60,38 @@ public class Juego_Colgado {
                     System.out.print("Introduce una letra: ");
                     String letra = x.nextLine().toLowerCase();
             
-                }
-            }
-	    }
+                 // Este if servira para comprobar si la letra es válida
+                    if (letra.length() != 1) {
+                        System.out.println("Por favor, introduce solo una letra."); 
+                    }
+                    // Sirve para que obtenga el primer carácter de la cadena introducida como la letra a adivinar
+                    char letraAdivinada = letra.charAt(0);
+                    // Lo he puesto para que compruebe que la letra es correcta
+                    boolean letraCorrecta = false;
+                    
+                 // Esta parte servira para verificar si la letra está en la palabra secreta
+                    for (int i = 0; i < palabrasecreta.length(); i++) {                        
+                    	if (palabrasecreta.charAt(i) == letraAdivinada && palabraadivinada[i] == '_') {
+                            palabraadivinada[i] = letraAdivinada;
+                            letraCorrecta = true; 
+                    	 }
+                    }                    
+                    // En caso de que la letra es incorrecta, restamos un intento
+                    if (!letraCorrecta) {
+                        intentosrestantes[jugador]--;
+                    }
+                            
+                    
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                   	}
+                 }
+             }
+         }  
 	}
-}
