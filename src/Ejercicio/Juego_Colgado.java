@@ -108,17 +108,20 @@ public class Juego_Colgado {
                         todosLosJugadoresPerdieron = false;
                         break;
                     }
+                }                
+                if (todosLosJugadoresPerdieron) {                   
+                	System.out.println("¡Todos los jugadores se han quedado sin intentos! Fin de la ronda.");
+                    break;
                 }
-                    
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                   	}
-                 }
-             }
-         }  
+            }
+        }      
+        // Al final del juego se mostrara al ganador
+        int ganador = 0;
+        for (int i = 1; i < rondasGanadas.length; i++) {
+            if (rondasGanadas[i] > rondasGanadas[ganador]) {
+                ganador = i;
+            }
+        }       
+        System.out.println("\n--- El ganador final es Jugador " + (ganador + 1) + " con " + rondasGanadas[ganador] + " rondas ganadas. ---");
+    }
+}
