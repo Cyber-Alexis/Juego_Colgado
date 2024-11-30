@@ -80,7 +80,21 @@ public class Juego_Colgado {
                     if (!letraCorrecta) {
                         intentosrestantes[jugador]--;
                     }
-                            
+
+                   // Aqui pondre el for para verificar si el jugador ha adivinado la palabra                   
+                    palabraAdivinada = true;
+                    for (int i = 0; i < palabraadivinada.length; i++) {
+                        if (palabraadivinada[i] == '_') {
+                            palabraAdivinada = false;
+                            break;
+                        }
+                    }                    
+                    // Y si la palabra ha sido adivinada se terminara la ronda
+                    if (palabraAdivinada) {
+                        System.out.println("¡Felicidades, Jugador " + (jugador + 1) + "! Has adivinado la palabra.");
+                        rondasGanadas[jugador]++;
+                        break;
+                    }       
                     
                             
                             
