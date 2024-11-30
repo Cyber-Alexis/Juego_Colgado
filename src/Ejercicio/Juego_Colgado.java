@@ -95,6 +95,20 @@ public class Juego_Colgado {
                         rondasGanadas[jugador]++;
                         break;
                     }       
+                    // Si el jugador se queda sin intentos, pierde la ronda
+                    if (intentosrestantes[jugador] == 0) {
+                        System.out.println("¡Que mal! Jugador " + (jugador + 1) + " se ha quedado sin intentos.");
+                    }
+                }
+                
+                // Si la palabra fue adivinada o todos los jugadores se han quedado sin intentos se termina la ronda
+                boolean todosLosJugadoresPerdieron = true;
+                for (int i = 0; i < numJugadores; i++) {
+                    if (intentosrestantes[i] > 0) {
+                        todosLosJugadoresPerdieron = false;
+                        break;
+                    }
+                }
                     
                             
                             
@@ -108,4 +122,3 @@ public class Juego_Colgado {
                  }
              }
          }  
-	}
